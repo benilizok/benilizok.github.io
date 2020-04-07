@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/9b0b6a4002.js" crossorigin="anonymous"></script>
+	<style>
+  		html, body {
+  			height: 100%;
+    		margin: 0;
+    		padding: 0;
+  		}
+	</style>
+
+</head>
+<body>
+	<!--п.2 меню сайта-->
+	<nav class="navbar navbar-expand-lg w-100 navbar-light bg-light shadow">
+		<img src="spaceship.png">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Таблица<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Map.html">Карта <span class="badge badge-secondary">Google Maps</span><span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="Tasks.html">О заданиях <i class="fab fa-github"></i><span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Contact.html">Контакты<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<div class="btn-group m-1">
+						<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-info-circle"></i> </button>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="https://student.itmo.ru/ru/">ITMO.STUDENTS</a>
+							<a class="dropdown-item" href="https://itmo.ru/ru/page/170/mezhdunarodnaya_deyatelnost.htm">Международная деятельность</a>
+							<a class="dropdown-item" href="https://itmo.ru/ru/schedule/raspisanie_zanyatiy.htm">Расписание занятий</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="jumbotron jumbotron-fluid" style="background:url(https://images.unsplash.com/photo-1531707566548-6577aab321d7?ixlib=rb-1.2.1&w=1000&q=80) no-repeat; background-size: cover;">
+		<div class="text-white text-center my-2">
+			<h1 class="display-4"><img src="start.png"> Практические задания</h1>
+			<p>по дисциплине Web-технологии</p>
+		</div>
+	</div>
+
+	
+	<!-- п.7.18 таблица с описанием заданий -->
+	<div class="container">
+		<table class="table table-bordered m-4 h-100 shadow">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Задание</th>
+					<th scope="col">Краткое описание</th>
+					<th scope="col">Ссылка на gitHub</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>Блочная вёрстка</td>
+					<td>По примеру создать страницу с двумя блоками, шапкой и футером (добавить стили css в отдельном файле).</td>
+					<td class="text-white">
+						<a href="https://github.com/benilizok/main/tree/master/Pr_blocks"><button type="button" class="btn btn-block btn-outline-primary">Перейти</button></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>Вёрстка сайта по шаблону</td>
+					<td>В соответствии с примером оформить контент страницы сайта (добавить стили css в отдельном файле).</td>
+					<td>
+						<a href="https://github.com/benilizok/main/tree/master/Pr_website"><button type="button" class="btn btn-block btn-outline-primary">Перейти</button></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>JS. Задание 1</td>
+					<td>Создать страницу с использованием javasscript. Работа со ссылками, добаление текста на страницу, обращение к элементам, подсчет количества элементов, вывод их свойств. Добавить формы с кнопками (показать имя формы/ очистить форму и т.д.). Для каждой кнопки написать отдельную функцию. Создание динамической таблицы.</td>
+					<td>
+						<a href="https://github.com/benilizok/main/tree/master/task_1"><button type="button" class="btn btn-block btn-outline-primary">Перейти</button></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>JS. Задание 2</td>
+					<td>Создать форму создания динамической таблицы. Пользователь вводит количество строк и столбцов. Добавить блок с функциями редактирования таблицы (изменения границ таблицы/ цвета ячеек/ удаление строк и т.д.). Для каждой кнопки написать отдельную функцию.</td>
+					<td>
+						<a href="https://github.com/benilizok/main/tree/master/task_2"><button type="button" class="btn btn-block btn-outline-primary">Перейти</button></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td>Практическая работа по jQuery</td>
+					<td>Создать страницу с любым наполнением, изменить стили и активность элементов с использованием jQuery. Добавить несколько ссылок и заменить http на https, настроить кнопку отмены. Добавить таблицу с элементами, к которым применить разные типы анимации.</td>
+					<td>
+						<a href="https://github.com/benilizok/main/tree/master/jQuery"><button type="button" class="btn btn-block btn-outline-primary">Перейти</button></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">6</th>
+					<td>Практическая работа по Bootstrap</td>
+					<td>Создать сайт из нескольких страниц. Доработать форму динамического создания таблицы c использованием фреймворка Bootstrap. Добавить страницу с подгрузкой карты Google Maps с определенной локацией и ее описанием, страницу с контактами автора, страницу с описанием выполненных заданий. Все оформить c использованием Bootstrap, адаптировать под разные размеры устройств.</td>
+					<td>
+						<a href="#"><button type="button" class="btn btn-block btn-outline-primary">Перейти</button></a>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!-- п.3 футер -->
+	<footer class="footer position-sticky py-1 bg-dark text-center text-white"> 
+		<p>Университет ИТМО, <span class="font-weight-bold">Беницевич Елизавета Михайловна</span>, 2020, N3455</p>
+	</footer> 
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

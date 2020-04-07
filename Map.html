@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/9b0b6a4002.js" crossorigin="anonymous"></script>
+	<style>
+		#map {
+    		height: 50%;
+  		}
+  		html, body {
+  			height: 100%;
+    		margin: 0;
+    		padding: 0;
+  		}
+	</style>
+</head>
+<body>
+	<!--п.2 меню сайта-->
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow w-100">
+		<img src="spaceship.png">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Таблица<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="Map.html">Карта <span class="badge badge-secondary">Google Maps</span><span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Tasks.html">О заданиях <i class="fab fa-github"></i><span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Contact.html">Контакты<span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="map"></div> <!--див для размещения карты-->
+
+	<div class="container"> <!--разметка страницы-->
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<!--п.7.16 описание локации (элемент card)-->
+				<div class="card h-100 m-4 border-0">
+					<div class="card-header bg-secondary text-center text-white">Куршская коса, Калининградская область</div>
+					<div class="card-text text-dark p-2 text-left">
+						<p>Куршская коса (лит. Kuršių nerija, нем. Kurische Nehrung) — узкая и длинная песчаная полоса суши (коса) саблевидной формы, отделяющая Куршский залив от Балтийского моря. Простирается от города Зеленоградск Калининградской области до города Клайпеда (Смильтине, Литва).</p>
+						<p>Куршская коса — визитная карточка Калининградской области, излюбленное место отдыха калининградцев и гостей Янтарного края.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<!--п.8 фото локации (компонент carousel)-->
+				<div id="photoAlbum" class="carousel slide m-4" data-ride="carousel">
+					<div class="carousel-inner shadow rounded">
+						<div class="carousel-item active">
+							<img src="carousel_item1.jpg" class="d-block w-100" alt="">
+							<div class="carousel-caption rounded-pill bg-secondary p-1">
+                   				<p><i class="fas fa-map-marker-alt"></i> Национальный парк "Куршская коса"</p>
+              				</div>
+						</div>
+						<div class="carousel-item">
+							<img src="carousel_item2.jpg" class="d-block w-100" alt="">
+							<div class="carousel-caption rounded-pill bg-secondary p-1">
+                   				<p><i class="fas fa-map-marker-alt"></i> Песчаные дюны</p>
+                   			</div>
+						</div>
+						<div class="carousel-item">
+							<img src="carousel_item3.jpg" class="d-block w-100" alt="">
+							<div class="carousel-caption rounded-pill bg-secondary p-1">
+                   				<p><i class="fas fa-map-marker-alt"></i> Миграционный путь птиц</p>
+                   			</div>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#photoAlbum" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#photoAlbum" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--п.7.16 загрузка карты-->
+	<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 55.1628, lng: 20.5815},
+          zoom: 9
+        });
+      }
+    </script>
+
+	<!--п.3 футер-->
+	<footer class="footer position-sticky py-1 bg-dark text-center text-white"> 
+		<p>Университет ИТМО, <span class="font-weight-bold">Беницевич Елизавета Михайловна</span>, 2020, N3455</p>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc1D6Y6EnEpBGULRKtBx1WBTZ9pAtmBMw&callback=initMap"
+    async defer></script>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task_Bootstrap</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://kit.fontawesome.com/9b0b6a4002.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<!--п.2 меню сайта-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light w-100 shadow">
+		<img src="spaceship.png">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<nav aria-label="breadcrumb">
+  						<ol class="breadcrumb p-1 m-1 bg-light">
+    						<li class="breadcrumb-item"><a href="index.html">Таблица</a></li>
+    						<li class="breadcrumb-item active" aria-current="page">Моя таблица</li>
+  						</ol>
+					</nav>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Map.html">Карта <span class="badge badge-secondary">Google Maps</span><span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Tasks.html">О заданиях <i class="fab fa-github"></i><span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="Contact.html">Контакты<span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- див для таблицы -->
+	<div id="myTable" class="m-3 p-2 text-center">
+		<h4 class="text-primary " id="tableTitle">Без заголовка</h4>
+	</div>
+
+	<!-- блок с функциями для изменения таблицы (компонент card-deck) -->
+	<div id="myFunctions" class="m-3 text-left">
+		<div class="row">
+			<div class="col-lg-2 col-md-4 col-sm-6">
+				<!-- карточка 1 "Границы таблицы" (компонет card)-->
+				<div class="card border-primary h-100 p-1 shadow" >
+				<div class="card-header bg-primary text-white h-30">Границы таблицы <button type="button" class="btn btn-primary btn-sm mx-auto d-inline" data-toggle="modal" data-target="#info_card_1"><i class="fas fa-question-circle"></i></button></div>
+				<!-- пояснение к карточке 1 (компонент modal) -->
+				<div class="modal fade" id="info_card_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  					<div class="modal-dialog" role="document">
+    					<div class="modal-content">
+     						 <div class="modal-header">
+        						<h5 class="modal-title text-info" id="exampleModalLabel">Функция 1. Описание</h5>
+     						 </div>
+      						<div class="modal-body">
+      							<p class="text-muted">Здесь можешь изменить стиль и ширину всех границ таблицы.</p>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+
+				<div class="card-body">
+					<form id="card_1" class="form-group">
+						<label for="borderWidth">Ширина границ в пикселях: </label>
+						<input id="borderWidth" type="number" class="form-control" name="borderWidth" value="1" min="1">
+						<label for="borderStyle">Стиль границ: </label>
+						<select id="borderStyle" class="form-control">
+							<option selected>Solid</option>
+							<option>Dotted</option>
+							<option>Dashed</option>
+							<option>Double</option>
+						</select>
+						<button type="submit" class="btn btn-sm btn-outline-primary mx-auto m-3 d-block"><i class="far fa-check-circle"></i> Применить</button>
+					</form>
+				</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6">
+				<!-- карточка 2 "Заголовк таблицы" -->	
+				<div class="card border-primary h-100 p-1 shadow">
+				<div class="card-header bg-primary text-white h-30">Заголовок таблицы <button type="button" class="btn btn-primary btn-sm mx-auto d-inline" data-toggle="modal" data-target="#info_card_2"><i class="fas fa-question-circle"></i></button></div>
+
+				<!-- пояснение к карточке 2 (компонент modal) -->
+				<div class="modal fade" id="info_card_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  					<div class="modal-dialog" role="document">
+    					<div class="modal-content">
+     						 <div class="modal-header">
+        						<h5 class="modal-title text-info" id="exampleModalLabel">Функция 2. Описание</h5>
+     						 </div>
+      						<div class="modal-body">
+      							<p class="text-muted">Здесь можешь изменить заголовок таблицы.</p>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+
+				<div class="card-body">
+					<form id="card_2" class="form-group">
+						<label for="tableName">Введи новый заголовок таблицы:</label>
+						<input type="text" class="form-control" name="tableName" id="tableName" value="Моя таблица">
+						<button type="submit" class="btn btn-sm btn-outline-primary d-block mx-auto m-3"><i class="far fa-check-circle"></i> Применить</button>
+					</form>
+				</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6">
+				<!-- карточка 3 "Удалить строку" -->
+				<div class="card border-primary h-100 p-1 shadow" >
+				<div class="card-header bg-primary text-white h-30">Удалить строку <button type="button" class="btn btn-primary btn-sm mx-auto d-inline" data-toggle="modal" data-target="#info_card_3"><i class="fas fa-question-circle"></i></button></div>
+
+				<!-- пояснение к карточке 3 (компонент modal) -->
+				<div class="modal fade" id="info_card_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  					<div class="modal-dialog" role="document">
+    					<div class="modal-content">
+     						 <div class="modal-header">
+        						<h5 class="modal-title text-info" id="exampleModalLabel">Функция 3. Описание</h5>
+     						 </div>
+      						<div class="modal-body">
+      							<p class="text-muted">Здесь можешь удалить любую строку таблицы по её номеру.</p>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+
+				<div class="card-body">
+					<form id="card_3"class="form-group">
+						<label for="row">Номер строки: </label>
+						<input type="number" class="form-control" name="row" id="row" value="1" min="1">
+						<button type="submit" class="btn btn-sm btn-outline-primary d-block mx-auto m-3"><i class="far fa-check-circle"></i> Применить</button>
+					</form>
+				</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6">
+				<!-- карточка 4 "Удалить столбец" -->
+				<div class="card border-primary h-100 p-1 shadow">
+				<div class="card-header bg-primary text-white h-30">Удалить столбец <button type="button" class="btn btn-primary btn-sm mx-auto d-inline" data-toggle="modal" data-target="#info_card_4"><i class="fas fa-question-circle"></i></button></div>
+
+				<!-- пояснение к карточке 4 (компонент modal) -->
+				<div class="modal fade" id="info_card_4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  					<div class="modal-dialog" role="document">
+    					<div class="modal-content">
+     						 <div class="modal-header">
+        						<h5 class="modal-title text-info" id="exampleModalLabel">Функция 4. Описание</h5>
+     						 </div>
+      						<div class="modal-body">
+      							<p class="text-muted">Здесь можешь удалить любой столбец таблицы по его букве.</p>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+
+				<div class="card-body">
+					<form id="card_4" class="form-group">
+						<label for="col">Буква столбца: </label>
+						<input type="text" class="form-control" name="col" id="col" value="A" pattern="[A-Z]{1}">
+						<button type="submit" class="btn btn-sm btn-outline-primary d-block mx-auto m-3"><i class="far fa-check-circle"></i> Применить</button>
+					</form>
+				</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6">
+				<!-- карточка 5 "Случаный выбор" -->
+				<div class="card border-primary h-100 p-1 shadow">
+				<div class="card-header bg-primary text-white h-30">Немного магии! <button type="button" class="btn btn-primary btn-sm mx-auto d-inline" data-toggle="modal" data-target="#info_card_5"><i class="fas fa-question-circle"></i></button></div>
+
+				<!-- пояснение к карточке 5 (компонент modal) -->
+				<div class="modal fade" id="info_card_5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  					<div class="modal-dialog" role="document">
+    					<div class="modal-content">
+     						 <div class="modal-header">
+        						<h5 class="modal-title text-info" id="exampleModalLabel">Функция 5. Описание</h5>
+     						 </div>
+      						<div class="modal-body">
+      							<p class="text-muted">По нажатию кнопки "Применить" изменится цвет ячейки, размер шрифта или появится форма заполнения ячейки.</p>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+
+				<div class="card-body">
+					<form id="card_5" class="form-group">
+						<button type="submit" class="btn btn-sm btn-outline-primary d-block mx-auto m-3"><i class="far fa-check-circle"></i> Применить</button>
+					</form>
+				</div>
+				</div>
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6">
+				<!-- карточка 6 "Очистить таблицу" -->
+				<div class="card border-primary h-100 p-1 shadow">
+				<div class="card-header bg-primary text-white h-30">Очистить таблицу <button type="button" class="btn btn-primary btn-sm mx-auto d-inline" data-toggle="modal" data-target="#info_card_6"><i class="fas fa-question-circle"></i></button></div>
+
+				<!-- пояснение к карточке 6 (компонент modal) -->
+				<div class="modal fade" id="info_card_6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  					<div class="modal-dialog" role="document">
+    					<div class="modal-content">
+     						 <div class="modal-header">
+        						<h5 class="modal-title text-info" id="exampleModalLabel">Функция 6. Описание</h5>
+     						 </div>
+      						<div class="modal-body">
+      							<p class="text-muted">По нажатию кнопки "Очистить" все введенные данные будут удалены, вместо них появятся формы заполнения ячеек.</p>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+      						</div>
+    					</div>
+  					</div>
+				</div>
+
+
+				<div class="card-body">
+					<form id="card_6" class="form-group">
+						<button type="submit" class="btn btn-sm btn-outline-primary d-block mx-auto m-3"><i class="far fa-check-circle"></i> Применить</button>
+					</form>
+				</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- п.3 футер-->
+	<footer class="footer sticky-bottom py-1 bg-dark text-center text-white"> 
+		<p>Университет ИТМО, <span class="font-weight-bold">Беницевич Елизавета Михайловна</span>, 2020, N3455</p>
+	</footer> 
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
