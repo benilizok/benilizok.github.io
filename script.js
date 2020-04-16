@@ -116,6 +116,16 @@ const addTitle = (title) => {//ф-я добавляет заголовок та�
 }
 
 const deleteOneRow = (number) => {//ф-я удаляет строку, п.7
+  let index=0;
+
+  $('table tr').find('th:eq(0)').each( function(){
+    if($(this).text()==number){
+      alert($(this).text);
+    }else{
+
+    }
+  })
+
   if (number<rowsNumber) {
     table.deleteRow(number);
     rowsNumber=rowsNumber-1;
